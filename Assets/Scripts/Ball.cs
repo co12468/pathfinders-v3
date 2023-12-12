@@ -23,14 +23,17 @@ public class Ball : MonoBehaviour
 
     public int Point { get; set; }
 
-    [SerializeField] private Animator cameraAnim;
+    [SerializeField]
+    GameObject ballPrefab;
+    [SerializeField]
+    Transform ballSpawnLocation;
 
     private TMP_Text feedBack;
 
     // Start is called before the first frame update
     void Start()
     {
-        _arrow = GameObject.FindGameObjectWithTag("Arrow").transform;
+        // _arrow = GameObject.FindGameObjectWithTag("Arrow").transform;
 
         rb = GetComponent<Rigidbody>();
 
@@ -86,14 +89,14 @@ public class Ball : MonoBehaviour
     {
         if (other.CompareTag("Lane"))
         {
-            round++;
             Debug.Log("Round started");
         }
         if (other.CompareTag("Gutter"))
         {
+            round++;
             Debug.Log("In the gutter!");
             StartCoroutine(ResetAfterDelay());
-            ResetBall();
+            // spawnBall();
         }
     }
 
@@ -127,6 +130,7 @@ public class Ball : MonoBehaviour
         }
 
         ResetPins();
+        ResetBall();
     }
     
     private void ResetPins()
@@ -158,8 +162,14 @@ public class Ball : MonoBehaviour
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
-        transform.position = new Vector3(1f, 0.5f, 0f); // Set the ball position
+        transform.position = ballSpawnLocation.position; // Set the ball position
         Debug.Log("Reset ball!");
+    }
+
+    public void spawnBall()
+    {
+        GameObject.Instantiate<GameObject>(ballPrefab,
+            ballSpawnLocation.position, Quaternion.identity);
     }
 
     // Method to update the score
