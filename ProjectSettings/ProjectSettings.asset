@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: pathfinder-chloe
+  productName: pathfinder-v3
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -136,6 +136,8 @@ PlayerSettings:
   bundleVersion: 0.1
   preloadedAssets:
   - {fileID: 11400000, guid: 6919ecd668896f44e9d806232d704117, type: 2}
+  - {fileID: 11400000, guid: e506f3fac62449f42a61a31c037d6118, type: 2}
+  - {fileID: -7958716953731692686, guid: 59a62ae88af4c314e82d842541bc3e32, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -155,7 +157,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.pathfinderchloe
+    Android: com.DefaultCompany.pathfinderv3
     Standalone: com.DefaultCompany.pathfinder-v3
   buildNumber:
     Standalone: 0

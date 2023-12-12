@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 8173257193340074163}
   - component: {fileID: 7575734401989682527}
   - component: {fileID: 8018782822915909703}
-  - component: {fileID: 4326547578382922520}
+  - component: {fileID: 6931056753861197960}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -282,7 +282,7 @@ MonoBehaviour:
   - {fileID: 3088630735714534030}
   - {fileID: 2432156632100456298}
   - {fileID: 2015148768601828971}
-  - {fileID: 4326547578382922520}
+  - {fileID: 0}
   - {fileID: 8018782822915909703}
 --- !u!114 &8018782822915909703
 MonoBehaviour:
@@ -305,7 +305,7 @@ MonoBehaviour:
   useLocalTransform: 0
   teleportDistance: 0
   teleportAngle: 0
---- !u!114 &4326547578382922520
+--- !u!114 &6931056753861197960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -314,22 +314,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 6081541307131335556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2659f9c52b735af48b49e2a01bf91770, type: 3}
+  m_Script: {fileID: 11500000, guid: fbdaeff62d9e2af40844375db92e2f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   networkObject: {fileID: 7575734401989682527}
   serializationRateHz: 30
   hybridOnChangeCompression: 1
   head: {fileID: 3674013588221922284}
-  headOffset: {fileID: 4756016831485743011}
+  headOffset: {fileID: 3674013588221922284}
   leftHand: {fileID: 7103346957621725648}
-  rightHand: {fileID: 8557524527709684383}
-  leftHandOffset: {fileID: 7833409763246716115}
-  rightHandOffset: {fileID: 6910725762102375489}
+  rightHand: {fileID: 7833409763246716115}
+  leftHandOffset: {fileID: 7103346957621725648}
+  rightHandOffset: {fileID: 7833409763246716115}
   avatarURL: 
   r: {fileID: 0}
   avatar: {fileID: 0}
-  controller: {fileID: 9100000, guid: 895c7a03b33774b409c641d4157943d7, type: 2}
+  controller: {fileID: 0}
+  swap: {fileID: 0}
 --- !u!1 &6285442735317258000
 GameObject:
   m_ObjectHideFlags: 0
