@@ -97,6 +97,7 @@ public class Ball : MonoBehaviour
             Debug.Log("In the gutter!");
             StartCoroutine(ResetAfterDelay());
             // spawnBall();
+            ResetBall();
         }
     }
 
@@ -130,7 +131,6 @@ public class Ball : MonoBehaviour
         }
 
         ResetPins();
-        ResetBall();
     }
     
     private void ResetPins()
