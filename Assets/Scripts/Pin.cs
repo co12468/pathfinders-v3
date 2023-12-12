@@ -27,6 +27,6 @@ public class Pin : MonoBehaviour
     public bool PinHasFallen()
     {
         Vector3 pinsUpVector = transform.up;
-        return Vector3.Angle(pinsUpVector, Vector3.up) > 1f;
+        return Vector3.Angle(pinsUpVector, Vector3.up) > 10f;
     }
 }
