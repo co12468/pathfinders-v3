@@ -34,12 +34,12 @@ public class BowlingGameManager : MonoBehaviour
 
         for (int i = 0; i < rolls.Count && frameIndex < 21; i++)
         {
-            currentScore += rolls[i];
+            currentScore = rolls[i];
 
             // Add the current score to the frame scores for each roll
             if (i % 2 != 0)
             {
-                currentScore -= (rolls[i - 1] * 2);
+                currentScore -= rolls[i - 1];
             }
             frameScores.Add(currentScore);
 
