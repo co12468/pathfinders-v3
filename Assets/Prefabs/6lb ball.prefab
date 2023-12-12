@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 4933870219205769986}
   - component: {fileID: 4855941297564321064}
   - component: {fileID: 6523411994877414300}
-  - component: {fileID: 5415949601996266751}
+  - component: {fileID: 4773553481432013588}
+  - component: {fileID: 2427301730501740082}
   m_Layer: 0
   m_Name: 6lb ball
   m_TagString: Untagged
@@ -182,8 +183,8 @@ MonoBehaviour:
   prefabName: 
   isSceneObject: 1
   syncedComponents:
-  - {fileID: 5415949601996266751}
---- !u!114 &5415949601996266751
+  - {fileID: 2427301730501740082}
+--- !u!114 &4773553481432013588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,9 +193,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 48106561973762377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb5456374ff36e409745fe45e5c0ce2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0abb9ba3e24b97f4f9073986714fe80d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSpeed: 40
+  pins: []
+  ballPrefab: {fileID: 0}
+  ballSpawnLocation: {fileID: 0}
+--- !u!114 &2427301730501740082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48106561973762377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410dcec1eb8d384bb58b75879bf3bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   networkObject: {fileID: 6523411994877414300}
   serializationRateHz: 30
   hybridOnChangeCompression: 1
+  targetPosition: {x: 0, y: 0, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
+  moveable: {fileID: 0}
+  network_uuid: 
+  local_uuid: 
+  requestedShares: 
+  rig: {fileID: 0}
+  text: {fileID: 0}

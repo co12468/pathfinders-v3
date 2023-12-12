@@ -334,9 +334,10 @@ GameObject:
   - component: {fileID: 4704253930773343515}
   - component: {fileID: 9024112186422061108}
   - component: {fileID: 4848870753507154181}
-  - component: {fileID: 1514146232914459941}
   - component: {fileID: 7508182321006709560}
   - component: {fileID: 8604693705615785224}
+  - component: {fileID: 4993133711221838027}
+  - component: {fileID: 5205578490502966073}
   m_Layer: 0
   m_Name: 12 lb ball
   m_TagString: Untagged
@@ -451,22 +452,7 @@ MonoBehaviour:
   prefabName: 
   isSceneObject: 1
   syncedComponents:
-  - {fileID: 1514146232914459941}
---- !u!114 &1514146232914459941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8542704185591496509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb5456374ff36e409745fe45e5c0ce2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  networkObject: {fileID: 4848870753507154181}
-  serializationRateHz: 30
-  hybridOnChangeCompression: 1
+  - {fileID: 4993133711221838027}
 --- !u!114 &7508182321006709560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,3 +508,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4993133711221838027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8542704185591496509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410dcec1eb8d384bb58b75879bf3bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkObject: {fileID: 4848870753507154181}
+  serializationRateHz: 30
+  hybridOnChangeCompression: 1
+  targetPosition: {x: 0, y: 0, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
+  moveable: {fileID: 0}
+  network_uuid: 
+  local_uuid: 
+  requestedShares: 
+  rig: {fileID: 0}
+  text: {fileID: 0}
+--- !u!114 &5205578490502966073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8542704185591496509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abb9ba3e24b97f4f9073986714fe80d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSpeed: 40
+  pins: []
+  ballPrefab: {fileID: 0}
+  ballSpawnLocation: {fileID: 0}
