@@ -24,6 +24,8 @@ public class UIManager : MonoBehaviour
 
         for (int i = 0; i < scores.Length; i++)
         {
+            int roundCounter = (i + 1) / 2; // Calculate the round number
+
             if (scores[i] == -1)
             {
                 frameScoresText[i].text = " "; // Display empty spaces for top row
@@ -34,7 +36,11 @@ public class UIManager : MonoBehaviour
             }
             else if (scores[i] == 10)
             {
-                frameScoresText[i].text = "X"; // Display dash for zero scores
+                    frameScoresText[i].text = "X"; // Display X for strike
+            }
+            else if (i % 2 != 0 && (scores[i] + scores[i-1]) == 10)
+            {
+                frameScoresText[i].text = "/"; // Display slash for spare
             }
             else
             {
@@ -42,7 +48,6 @@ public class UIManager : MonoBehaviour
             }
 
             // Calculate and display the round totals after every two frames
-            int roundCounter = (i + 1) / 2; // Calculate the round number
             if ((i + 1) % 2 == 0 && scores[i] != -1) // Check if it's the end of a round
             {
                 roundTotalText[roundCounter - 1].text = CalculateRoundTotal(scores, i).ToString(); // Update round total
